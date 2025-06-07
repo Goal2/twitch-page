@@ -1,0 +1,2 @@
+(this["webpackJsonptwitch-profile-web"]=this["webpackJsonptwitch-profile-web"]||[]).push([[0],[function(o,e,t){"use strict";t.r(e),console.log("Hello world")}],[[0,1]]]);
+//# sourceMappingURL=main.beaf3edd.chunk.js.map

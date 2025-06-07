@@ -1,0 +1,1 @@
+{"version":3,"sources":["index.ts"],"names":["console","log"],"mappings":"4HAAAA,eAAQC,IAAI,c","file":"static/js/main.beaf3edd.chunk.js","sourcesContent":["console.log('Hello world');\r\nexport {};\r\n"],"sourceRoot":""}
