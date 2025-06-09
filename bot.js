@@ -2,7 +2,9 @@ require('dotenv').config();
 const tmi = require('tmi.js');
 const fs = require('fs');
 const path = require('path');
+const express = require('express');
 
+// ======== Twitch Bot ========
 const client = new tmi.Client({
   identity: {
     username: process.env.TWITCH_USERNAME,
@@ -30,4 +32,15 @@ client.on('message', (channel, tags, message, self) => {
 
   const filePath = path.join(__dirname, 'public', 'top_chatteurs.json');
   fs.writeFileSync(filePath, JSON.stringify(top10, null, 2));
+});
+
+// ======== Serveur Express pour Railway ========
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+// Sert les fichiers statiques (ton HTML, JSON, images, etc.)
+app.use(express.static('public'));
+
+app.listen(PORT, () => {
+  console.log(`✅ Serveur Express en ligne sur le port ${PORT}`);
 });
