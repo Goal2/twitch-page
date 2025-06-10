@@ -259,7 +259,7 @@
 
     async function chargerDonnees() {
   try {
-    const chatteursRes = await fetch('https://beryl-trapezoidal-aquarius.glitch.me/top_chatteurs.json');
+    const chatteursRes = await fetch('https://twitch-page-production.up.railway.app/top_chatteurs.json');
     const chatteurs = await chatteursRes.json();
     const list = document.getElementById('topChatteursList');
     list.innerHTML = '';
@@ -277,7 +277,7 @@ setInterval(chargerDonnees, 5000);
 
 
       try {
-        const donsRes = await fetch('https://beryl-trapezoidal-aquarius.glitch.me/dons.json');
+        const donsRes = await fetch('https://twitch-page-production.up.railway.app/top_chatteurs.json');
         const dons = await donsRes.json();
         const list = document.getElementById('derniersDonsList');
         list.innerHTML = '';
@@ -291,7 +291,7 @@ setInterval(chargerDonnees, 5000);
       }
 
       try {
-        const meilleursRes = await fetch('https://beryl-trapezoidal-aquarius.glitch.me/top_dons.json');
+        const meilleursRes = await fetch('https://twitch-page-production.up.railway.app/top_chatteurs.json');
         const meilleurs = await meilleursRes.json();
         const list = document.getElementById('meilleursDonsList');
         list.innerHTML = '';
